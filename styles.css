@@ -1,0 +1,324 @@
+html {
+    box-sizing: border-box;
+}
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(fonts/TTLakes-Regular.eot);
+    src: url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url(fonts/TTLakes-Regular.woff) format('woff'),
+    url(fonts/TTLakes-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TT Lakes';
+    src: url(fonts/TTLakes-Medium.eot);
+    src: url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
+    url(fonts/TTLakes-Medium.woff) format('woff'),
+    url(fonts/TTLakes-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'TT Lakes';
+    font-weight: 400;
+    color: #1B1C21;
+    background: #F8F8F8;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+}
+
+.container__name {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7e7e82;
+    padding-top: 16px;
+    margin-bottom: 32px;
+}
+
+.container__name::after {
+    content: " ";
+    height: 75px;
+    width: 24px;
+    position: absolute;
+    right: 0;
+    top: 100px;
+    /* background-color: #1B1C21; */
+    background: linear-gradient(
+        270deg,
+        #f8f8f8 16.84%,
+        rgba(248, 248, 248, 0.0001) 100%
+    );
+    z-index: 100;
+}
+
+.swiper__card-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    height: 72px;
+    border: 1px solid #EAEAEA;
+    border-radius: 7px;
+    background: #FFFFFF;
+    margin-right: 16px;
+    margin-bottom: 16px;
+}
+
+.swiper-pagination {
+    position: static;
+    padding-left: 0;
+}
+
+.swiper__card-button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    background: url(images/button_img.png) no-repeat center;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.swiper__card-logo {
+    padding-left: 16px;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+    background-color: #DDDDDD;
+    opacity: 1;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+.container__wrapper {
+    display: none;
+}
+
+.container__wrapper-web {
+    display: none;
+}
+
+.container__show-button {
+    display: none;
+}
+
+@media (min-width: 550px) {
+    .swiper {
+        display: none;
+    }
+
+    .container__wrapper {
+        display: block;
+        max-width: 800px;
+    }
+
+    .container__wrapper-web {
+        display: none;
+    }
+
+    .container {
+        padding: 0 24px;
+        height: 100%;
+    }
+
+    .container__name {
+        margin-bottom: 40px;
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 24px;
+    }
+
+    .card__brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 224px;
+        height: 72px;
+        border: 1px solid #EAEAEA;
+        border-radius: 7px;
+        background: #FFFFFF;
+        margin-bottom: 16px;
+    }
+
+    .card__logo {
+        padding-left: 16px;
+    }
+
+    .card__button {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #FF3E79;
+        border-radius: 50%;
+        background: url(images/button_img.png) no-repeat center;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+
+    .container__show-button {
+        display: block;
+        position: relative;
+        font-weight: 500;
+        padding-left: 33px;
+        padding-top: 8px;
+    }
+
+    .container__show-button--active {
+        position: relative;
+        font-weight: 500;
+        padding-left: 33px;
+        padding-top: 8px;
+    }
+
+    .container__show-button--active::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url(images/show-more.svg) no-repeat;
+        transform: rotate(180deg);
+    }
+
+    .container__show-button::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url(images/show-more.svg) no-repeat;
+    }
+
+    .none {
+        display: none;
+    }
+}
+
+@media (min-width: 1120px) {
+    .swiper {
+        display: none;
+    }
+
+    .container__wrapper {
+        display: none;
+    }
+
+    .container__wrapper-web {
+        display: block;
+    }
+
+    .container {
+        padding: 0 32px;
+    }
+
+    .card {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 32px;
+    }
+
+    .card__brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 240px;
+        height: 72px;
+        border: 1px solid #EAEAEA;
+        border-radius: 7px;
+        background: #FFFFFF;
+        margin-bottom: 16px;
+    }
+
+    .card__logo {
+        padding-left: 16px;
+    }
+
+    .card__button {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #FF3E79;
+        border-radius: 50%;
+        background: url(images/button_img.png) no-repeat center;
+        margin-right: 16px;
+        cursor: pointer;
+    }
+
+    .container__show-button {
+        position: relative;
+        font-weight: 500;
+        padding-left: 33px;
+        padding-top: 8px;
+    }
+
+    .container__show-button--active {
+        position: relative;
+        font-weight: 500;
+        padding-left: 33px;
+        padding-top: 8px;
+    }
+
+    .container__show-button--active::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url(images/show-more.svg) no-repeat;
+        transform: rotate(180deg);
+    }
+
+    .container__show-button::before {
+        content: '';
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url(images/show-more.svg) no-repeat;
+    }
+
+    .none {
+        display: none;
+    }
+}
