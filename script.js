@@ -32,7 +32,6 @@ window.addEventListener('resize', () => {
 let button = document.querySelector('.container__show-button');
 let cards = document.querySelectorAll('.container__slide');
 let currentCard = cards[1];
-let currentCardTwo = cards[3];
 
 const onToggle = (element, className, button, btnClass, modification) => {
   const classes = element.classList;
@@ -51,10 +50,6 @@ const onToggle = (element, className, button, btnClass, modification) => {
 };
 
 button.addEventListener('click', () => {
-  if (window.matchMedia('(min-width: 1120px)').matches) {
-    onToggle(currentCardTwo, 'none', button, 'container__show-button', 'container__show-button--active');
-  } else {
     onToggle(currentCard, 'none', button, 'container__show-button', 'container__show-button--active');
-  }
 });
 
